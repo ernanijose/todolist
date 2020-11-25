@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Task;
+use App\Models\Tasks;
 use Illuminate\Http\Request;
 use App\Http\Requests\Task\StoreTask;
 use App\Services\ResponseService;
@@ -13,7 +13,7 @@ class TasksController extends Controller
 {
     private $tasks;
 
-    public function __construct(Task $tasks){
+    public function __construct(Tasks $tasks){
         $this->tasks = $tasks;
     }
 

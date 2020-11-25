@@ -27,9 +27,9 @@ Route::group(['prefix' => 'v1', 'middleware' => 'jwt.verify'],function () {
         'tasks'     => 'App\Http\Controllers\TasksController',
     ]);
 
-    Route::put('task/close/{id}', 'TasksController@closeTask')->name('tasks.closeTask');
+    Route::put('task/close/{id}', 'App\Http\Controllers\TasksController@closeTask')->name('tasks.closeTask');
 
-    Route::get('list/tasks/{id}', 'TasksController@tasksByList')->name('tasks.tasksByList');
+    Route::get('list/tasks/{id}', 'App\Http\Controllers\TasksController@tasksByList')->name('tasks.tasksByList');
     
     Route::post('completedTaskList', 'App\Http\Controllers\TaskListController@completedTaskList')->name('tasklist.completedTaskList');
       
